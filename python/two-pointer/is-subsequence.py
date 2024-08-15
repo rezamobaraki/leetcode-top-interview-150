@@ -7,6 +7,8 @@ def is_subsequence(s: str, t: str) -> bool:
             s_ptr += 1
         t_ptr += 1
 
+    return s_ptr == len(s)
+
 
 if __name__ == '__main__':
     s, t = "abc", "ahbgdc"
