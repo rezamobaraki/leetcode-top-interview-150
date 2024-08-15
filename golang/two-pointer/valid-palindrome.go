@@ -30,6 +30,7 @@ func isPalindrome(s string) bool {
 
 func isPalindrome2(s string) bool {
 	var cleanedStr []rune
+
 	for _, c := range s {
 		if unicode.IsLetter(c) || unicode.IsDigit(c) {
 			cleanedStr = append(cleanedStr, unicode.ToLower(c))
@@ -38,7 +39,7 @@ func isPalindrome2(s string) bool {
 
 	n := len(cleanedStr)
 	for i := 0; i < n/2; i++ {
-		if cleanedStr[i] != cleanedStr[n-i-1] {
+		if cleanedStr[i] != cleanedStr[n-1-i] {
 			return false
 		}
 	}
