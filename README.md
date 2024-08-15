@@ -1,4 +1,5 @@
-# LeetCode Top 150 Questions Solutions
+# [LeetCode Top 150 Questions Solutions](https://leetcode.com/studyplan/top-interview-150/)
+
 
 This project contains solutions to the top 150 LeetCode interview questions, implemented in Python, Go, JavaScript, and TypeScript.
 
