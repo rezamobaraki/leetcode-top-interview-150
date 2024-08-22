@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 /*
 202. Happy Number
 Write an algorithm to determine if a number n is happy.
@@ -28,3 +30,26 @@ Input: n = 2
 Output: false
 
 */
+
+func isHappy(n int) bool {
+	next := func(number int) int {
+		totalSum := 0
+		for number > 0 {
+			digit := number % 10
+			totalSum += digit * digit
+			number /= 10
+		}
+		return totalSum
+	}
+	seen := make(map[int]bool)
+	for n != 1 && !seen[n] {
+		seen[n] = true
+		n = next(n)
+	}
+	return n == 1
+}
+
+func main() {
+	n := 19
+	fmt.Println(isHappy(n)) // true
+}
