@@ -38,8 +38,8 @@ This project contains solutions to the top 150 LeetCode interview questions, imp
 1. Ensure you have Go installed. You can download it from [here](https://golang.org/dl/).
 2. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/leetcode-top-150.git
-    cd leetcode-top-150/golang
+    git clone https://github.com/rezamobaraki/leetcode-top-interview-150.git
+    cd leetcode-top-interview-150/golang
     ```
 3. Run the Go files:
     ```sh
@@ -51,8 +51,8 @@ This project contains solutions to the top 150 LeetCode interview questions, imp
 1. Ensure you have Python installed. You can download it from [here](https://www.python.org/downloads/).
 2. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/leetcode-top-150.git
-    cd leetcode-top-150/python
+    git clone https://github.com/rezamobaraki/leetcode-top-interview-150.git
+    cd leetcode-top-interview-150/python
     ```
 3. Run the Python files:
     ```sh
@@ -64,8 +64,8 @@ This project contains solutions to the top 150 LeetCode interview questions, imp
 1. Ensure you have Node.js installed. You can download it from [here](https://nodejs.org/).
 2. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/leetcode-top-150.git
-    cd leetcode-top-150/javascript
+    git clone https://github.com/rezamobaraki/leetcode-top-interview-150.git
+    cd leetcode-top-interview-150/javascript
     ```
 3. Run the JavaScript files:
     ```sh
@@ -80,8 +80,8 @@ This project contains solutions to the top 150 LeetCode interview questions, imp
     ```
 2. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/leetcode-top-150.git
-    cd leetcode-top-150/typescript
+    git clone https://github.com/rezamobaraki/leetcode-top-interview-150.git
+    cd leetcode-top-interview-150/typescript
     ```
 3. Compile and run the TypeScript files:
     ```sh
@@ -165,7 +165,7 @@ This project is actively maintained and updated with new solutions.
 
 ## Author
 
-- [Reza Mobaraki](https://github.com/MrRezoo)
+- [Reza Mobaraki](https://github.com/rezamobaraki)
 
 ## Contributors
 
