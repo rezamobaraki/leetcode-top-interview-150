@@ -31,6 +31,7 @@ def two_sum(nums, target):
 
         num_to_index[num] = i
 
+
 def two_sum_v2(nums, target):
     checked = {}
     i = 0
@@ -40,6 +41,14 @@ def two_sum_v2(nums, target):
 
     return [checked[target - nums[i]], i]
 
+
+def two_sum_v3(nums, target):
+    for i,num in enumerate(nums):
+        for j, num_2 in enumerate(nums):
+            if num + num_2 == target:
+                return [nums[i], nums[j]]
+
+    return []
 
 if __name__ == '__main__':
     nums = [2, 7, 11, 15]

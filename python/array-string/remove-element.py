@@ -8,6 +8,16 @@ def removeElement(nums, val):
 
     return k
 
+def removeElement_v2(self, nums: list[int], val: int) -> int:
+    k = 0
+    for num in nums:
+        if num == val:
+            continue
+        nums[k] = num
+        k += 1
+
+    return k
+
 
 if __name__ == '__main__':
 
