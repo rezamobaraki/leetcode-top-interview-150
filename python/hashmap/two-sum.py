@@ -56,6 +56,21 @@ def two_sum_v3(nums, target):
     return []
 
 
+def two_sum_pointers(nums, target):
+    # Just work for sorted
+    left, right = 0, len(nums) - 1
+    while left < right:
+        total = nums[left] + nums[right]
+        if total == target:
+            return [left, right]
+        elif total < target:
+            left += 1
+        else:
+            right -= 1
+
+    return []
+
+
 if __name__ == '__main__':
     nums = [2, 7, 11, 15]
     target = 9
