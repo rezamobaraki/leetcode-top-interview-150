@@ -1,0 +1,60 @@
+[project]
+name = "leetcode-top-interview-150"
+version = "0.1.0"
+description = "LeetCode Top Interview 150 solutions in Python, Go, Java"
+readme = "README.md"
+requires-python = ">=3.14"
+authors = [
+    { name = "rezoo" }
+]
+license = { text = "MIT" }
+keywords = ["leetcode", "algorithms", "interview", "python", "golang", "java"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+managed = true
+package = false
+
+[tool.uv.sources]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8.0",
+    "ty>=0.0.13",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py314"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+testpaths = ["python"]
+python_files = "*.py"
+python_functions = "test_*"
+addopts = "-v --cov=python --cov-report=term-missing"
