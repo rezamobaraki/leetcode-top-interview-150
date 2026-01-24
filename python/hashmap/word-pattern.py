@@ -26,7 +26,7 @@ def word_Pattern(pattern: str, s: str) -> bool:
     char_to_word = {}
     word_to_char = {}
 
-    for char, word in zip(pattern, words):
+    for char, word in zip(pattern, words, strict=False):
         if char in char_to_word:
             if char_to_word[char] != word:
                 return False
