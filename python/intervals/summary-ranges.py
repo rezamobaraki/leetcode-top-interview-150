@@ -1,7 +1,6 @@
-from typing import List
 
 
-def summary_ranges(nums: List[int]) -> List[str]:
+def summary_ranges(nums: list[int]) -> list[str]:
     if not nums:
         return []
 

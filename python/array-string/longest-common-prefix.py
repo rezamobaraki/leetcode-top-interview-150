@@ -1,7 +1,6 @@
-from typing import List
 
 
-def longest_common_prefix(strs: List[str]) -> str:
+def longest_common_prefix(strs: list[str]) -> str:
     if not strs:
         return ""
 
@@ -14,7 +13,7 @@ def longest_common_prefix(strs: List[str]) -> str:
     return prefix
 
 
-def longest_common_prefix_2(strs: List[str]) -> str:
+def longest_common_prefix_2(strs: list[str]) -> str:
     prefix = strs[0]
     prefix_len = len(prefix)
 

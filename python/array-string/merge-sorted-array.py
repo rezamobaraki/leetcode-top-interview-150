@@ -1,7 +1,6 @@
-from typing import List
 
 
-def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+def merge(nums1: list[int], m: int, nums2: list[int], n: int) -> None:
     # Start from the end of both arrays
     i = m - 1
     j = n - 1
@@ -17,7 +16,7 @@ def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         k -= 1
 
 
-def merge_v2(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+def merge_v2(nums1: list[int], m: int, nums2: list[int], n: int) -> None:
     p1 = m - 1
     p2 = n - 1
     p = m + n - 1
