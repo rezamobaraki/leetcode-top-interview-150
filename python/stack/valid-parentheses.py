@@ -14,12 +14,12 @@ def is_valid(s: str) -> bool:
 
 
 if __name__ == '__main__':
-    assert is_valid("()") == True
-    assert is_valid("()[]{}") == True
-    assert is_valid("(]") == False
-    assert is_valid("([)]") == False
-    assert is_valid("{[]}") == True
-    assert is_valid("]") == False
-    assert is_valid("((") == False
-    assert is_valid("((") == False
-    assert is_valid("(()(") == False
+    assert is_valid("()")
+    assert is_valid("()[]{}")
+    assert not is_valid("(]")
+    assert not is_valid("([)]")
+    assert is_valid("{[]}")
+    assert not is_valid("]")
+    assert not is_valid("((")
+    assert not is_valid("((")
+    assert not is_valid("(()(")
