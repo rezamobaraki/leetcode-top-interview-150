@@ -1,172 +1,145 @@
-# [LeetCode Top 150 Questions Solutions](https://leetcode.com/studyplan/top-interview-150/)
+# Coding Interview Practice 🚀
 
+[![Languages](https://img.shields.io/badge/Languages-Python%20%7C%20Go%20%7C%20Java%20%7C%20Rust-blue)](#)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-This project contains solutions to the top 150 LeetCode interview questions, implemented in Python, Go, JavaScript, and TypeScript.
+A multi-language repository for solving coding problems from various platforms. This project serves two main purposes:
 
-## Project Structure
+1. **Learning Algorithms & Interview Preparation** - Practice algorithmic thinking and problem-solving patterns
+2. **Learning Programming Language Fundamentals** - Master syntax, idioms, and best practices across different languages
 
-- `golang/`: Contains Go implementations of the solutions.
-- `python/`: Contains Python implementations of the solutions.
-- `javascript/`: Contains JavaScript implementations of the solutions.
-- `typescript/`: Contains TypeScript implementations of the solutions.
+## 📚 Problem Sources
 
-## Table of Contents
+- **[ByteByteGo Coding Patterns](https://bytebytego.com/courses/coding-patterns)** - Primary resource for learning algorithmic patterns
+- **[LeetCode](https://leetcode.com/)** - Top Interview 150 and practice problems
 
-1. [Installation](#installation)
-    - [Go](#go)
-    - [Python](#python)
-    - [JavaScript](#javascript)
-    - [TypeScript](#typescript)
-2. [Usage](#usage)
-    - [Example](#example)
-    - [Running the Solutions](#running-the-solutions)
-    - [Testing the Solutions](#testing-the-solutions)
-    - [Adding New Solutions](#adding-new-solutions)
-3. [Contributing](#contributing)
-4. [License](#license)
-5. [Contact](#contact)
-6. [References](#references)
-7. [Project Status](#project-status)
-8. [Release History](#release-history)
-9. [Author](#author)
-10. [Contributors](#contributors)
+## 🗂️ Project Structure
 
-## Installation
+```
+├── python/          # Python (main language)
+│   ├── leetcode/
+│   └── bytebytego/
+├── golang/          # Go (learning & review)
+│   └── leetcode/
+├── java/            # Java (planned)
+└── rust/            # Rust (planned)
+```
 
-### Go
+Problems are organized by category: `array-string`, `hashmap`, `two-pointer`, `stack`, `linked-list`, `intervals`, `math`, etc.
 
-1. Ensure you have Go installed. You can download it from [here](https://golang.org/dl/).
-2. Clone the repository:
-    ```sh
-    git clone https://github.com/rezamobaraki/leetcode-top-interview-150.git
-    cd leetcode-top-interview-150/golang
-    ```
-3. Run the Go files:
-    ```sh
-    go run <filename>.go
-    ```
+## 🛠️ Languages
+
+- **Python** 🐍 - Primary language
+- **Go** 🔵 - Learning & reviewing fundamentals
+- **Java** ☕ - Planned
+- **Rust** 🦀 - Planned
+
+## 💻 Installation
+
+```sh
+git clone https://github.com/rezamobaraki/leetcode-top-interview-150.git
+cd leetcode-top-interview-150
+```
 
 ### Python
 
-1. Ensure you have Python installed. You can download it from [here](https://www.python.org/downloads/).
-2. Clone the repository:
-    ```sh
-    git clone https://github.com/rezamobaraki/leetcode-top-interview-150.git
-    cd leetcode-top-interview-150/python
-    ```
-3. Run the Python files:
-    ```sh
-    python <filename>.py
-    ```
+This project uses [uv](https://github.com/astral-sh/uv) for dependency management:
 
-### JavaScript
-
-1. Ensure you have Node.js installed. You can download it from [here](https://nodejs.org/).
-2. Clone the repository:
-    ```sh
-    git clone https://github.com/rezamobaraki/leetcode-top-interview-150.git
-    cd leetcode-top-interview-150/javascript
-    ```
-3. Run the JavaScript files:
-    ```sh
-    node <filename>.js
-    ```
-
-### TypeScript
-
-1. Ensure you have Node.js and TypeScript installed. You can download Node.js from [here](https://nodejs.org/) and install TypeScript globally using:
-    ```sh
-    npm install -g typescript
-    ```
-2. Clone the repository:
-    ```sh
-    git clone https://github.com/rezamobaraki/leetcode-top-interview-150.git
-    cd leetcode-top-interview-150/typescript
-    ```
-3. Compile and run the TypeScript files:
-    ```sh
-    tsc <filename>.ts
-    node <filename>.js
-    ```
-
-## Usage
-
-Each file in the `golang/`, `python/`, `javascript/`, and `typescript/` directories corresponds to a specific LeetCode problem. You can run the files to see the solutions in action.
-
-### Example
-
-To run the `is-subsequence` solution in Go:
 ```sh
-cd golang/1-two-pointer
-go run is-subsequence.go
+# Install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Setup and activate
+uv sync
+source .venv/bin/activate
 ```
 
-To run the `is-subsequence` solution in Python:
+### Go
+
 ```sh
-cd python/1-two-pointer
-python is-subsequence.py
+go version  # Ensure Go is installed
+cd golang
 ```
 
-To run the `is-subsequence` solution in JavaScript:
+### Java & Rust
+
+Coming soon!
+
+## 📖 Usage
+
+### Running Solutions
+
+**Python:**
 ```sh
-cd javascript/1-two-pointer
-node is-subsequence.js
+python python/leetcode/hashmap/two-sum.py
 ```
 
-To run the `is-subsequence` solution in TypeScript:
+**Go:**
 ```sh
-cd typescript/1-two-pointer
-tsc is-subsequence.ts
-node is-subsequence.js
+go run golang/leetcode/two-pointer/valid-palindrome.go
 ```
 
-### Running the Solutions
+### Code Quality (Python)
 
-To run any solution, navigate to the appropriate directory and execute the file using the respective language's command.
+```sh
+uv run ruff check .          # Lint
+uv run ruff check --fix .    # Auto-fix
+uv run ruff format .         # Format
+```
 
-### Testing the Solutions
+## 📚 Problem Categories
 
-You can add test cases to the main function or use testing frameworks like `unittest` for Python, `testing` for Go, `jest` for JavaScript, and `jest` for TypeScript.
+Solutions are organized by common algorithmic patterns:
 
-### Adding New Solutions
+- **Array & String** - Manipulation, searching, and pattern matching
+- **HashMap / HashSet** - Efficient lookups and frequency counting
+- **Two Pointer** - Optimization techniques for arrays and strings
+- **Linked List** - Pointer manipulation and traversal
+- **Stack** - LIFO operations and expression parsing
+- **Intervals** - Range handling and merging
+- **Math** - Number theory and mathematical patterns
 
-1. Create a new file in the appropriate directory (`golang/`, `python/`, `javascript/`, or `typescript/`).
-2. Implement the solution for the LeetCode problem.
-3. Add test cases to the main function or a separate test file.
+## 🤝 Contributing
 
-## Contributing
+Contributions are welcome! Feel free to:
+- Add solutions in any language
+- Improve existing solutions
+- Add tests or documentation
+- Fix bugs
 
-Contributions are welcome! Please open an issue or submit a pull request.
+**Coding Standards:**
+- Python: PEP 8 (enforced by Ruff)
+- Go: Standard Go formatting (`gofmt`)
+- Java: Google Java Style Guide
+- Rust: Rustfmt
 
-## License
+## 📝 License
 
-This project is licensed under the MIT License.
+MIT License - see the LICENSE file for details.
 
-## Contact
+## 📚 Resources
 
-For any questions or suggestions, please open an issue in the repository.
+### Learning Platforms
+- [ByteByteGo Coding Patterns](https://bytebytego.com/courses/coding-patterns) - Structured algorithmic patterns course
+- [LeetCode](https://leetcode.com/) - Practice coding problems
+- [NeetCode](https://neetcode.io/) - Problem roadmap and explanations
 
-## References
-
-- [LeetCode](https://leetcode.com/)
-- [Go Documentation](https://golang.org/doc/)
+### Language Documentation
 - [Python Documentation](https://docs.python.org/3/)
-- [JavaScript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+- [Go Documentation](https://go.dev/doc/)
+- [Java Documentation](https://docs.oracle.com/en/java/)
+- [Rust Documentation](https://doc.rust-lang.org/)
 
-## Project Status
+### Algorithm Resources
+- [Big-O Cheat Sheet](https://www.bigocheatsheet.com/)
+- [Visualgo](https://visualgo.net/) - Algorithm visualizations
 
-This project is actively maintained and updated with new solutions.
+## 👥 Authors
 
-## Release History
+**Reza Mobaraki** - [@rezamobaraki](https://github.com/rezamobaraki)
 
-- 1.0.0
-    - Initial release with solutions to the top 150 LeetCode questions.
+**Contributors:** [Mary Ostovar](https://github.com/maryOstovar)
 
-## Author
+---
 
-- [Reza Mobaraki](https://github.com/rezamobaraki)
-
-## Contributors
-
-- [Mary Ostovar](https://github.com/maryOstovar)
+**Happy Coding!** 💻✨
