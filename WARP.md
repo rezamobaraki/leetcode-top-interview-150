@@ -43,14 +43,14 @@ go run merge-sorted-array.go
 ### JavaScript
 ```bash
 # Run a single solution
-node javascript/two-pointer/is-subsequence.js
+node javascript/1-two-pointer/is-subsequence.js
 ```
 
 ### TypeScript
 ```bash
 # Compile and run
-tsc typescript/two-pointer/is-subsequence.ts
-node typescript/two-pointer/is-subsequence.js
+tsc typescript/1-two-pointer/is-subsequence.ts
+node typescript/1-two-pointer/is-subsequence.js
 ```
 
 ## File Naming Convention

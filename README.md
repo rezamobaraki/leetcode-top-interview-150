@@ -97,25 +97,25 @@ Each file in the `golang/`, `python/`, `javascript/`, and `typescript/` director
 
 To run the `is-subsequence` solution in Go:
 ```sh
-cd golang/two-pointer
+cd golang/1-two-pointer
 go run is-subsequence.go
 ```
 
 To run the `is-subsequence` solution in Python:
 ```sh
-cd python/two-pointer
+cd python/1-two-pointer
 python is-subsequence.py
 ```
 
 To run the `is-subsequence` solution in JavaScript:
 ```sh
-cd javascript/two-pointer
+cd javascript/1-two-pointer
 node is-subsequence.js
 ```
 
 To run the `is-subsequence` solution in TypeScript:
 ```sh
-cd typescript/two-pointer
+cd typescript/1-two-pointer
 tsc is-subsequence.ts
 node is-subsequence.js
 ```
