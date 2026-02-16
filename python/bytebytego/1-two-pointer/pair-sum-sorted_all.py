@@ -16,10 +16,10 @@ def pair_sum_sorted(nums: List[int], target: int) -> List[int]:
 		elif temp > target:
 			right -= 1
 
-	return []
+	return results
 
 
 if __name__ == '__main__':
 	target = 7
-	nums = [-5, -2, 3, 4, 6]
+	nums = [-5, -2, 2, 3, 4, 5, 6]
 	pair_sum_sorted(nums, target)

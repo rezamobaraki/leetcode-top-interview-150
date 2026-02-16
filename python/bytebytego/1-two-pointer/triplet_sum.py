@@ -1,3 +1,4 @@
+# Original Implementation - Using helper function
 def triplet_sum(nums: list[int]) -> list[list[int]] | list:
     nums.sort()
     triplets = []  # a + b + c = 0 ---->  b + c = -a
@@ -38,14 +39,75 @@ def pair_sum_sorted_all_pairs(nums, start, target):
     return pairs
 
 
+# Simplified Implementation - Inline two-pointer approach (easier to understand)
+def triplet_sum_v2(nums: list[int]) -> list[list[int]]:
+    """
+    Find all unique triplets that sum to zero using two-pointer technique.
+    Time: O(n²), Space: O(1) excluding output
+    """
+    nums.sort()
+    result = []
+
+    for i in range(len(nums) - 2):
+        # Skip if current value is same as previous (avoid duplicates)
+        if i > 0 and nums[i] == nums[i - 1]:
+            continue
+
+        # Two-pointer approach for the remaining array
+        left, right = i + 1, len(nums) - 1
+        target = -nums[i]
+
+        while left < right:
+            current_sum = nums[left] + nums[right]
+
+            if current_sum == target:
+                result.append([nums[i], nums[left], nums[right]])
+
+                # Skip duplicates for left pointer
+                while left < right and nums[left] == nums[left + 1]:
+                    left += 1
+                # Skip duplicates for right pointer
+                while left < right and nums[right] == nums[right - 1]:
+                    right -= 1
+
+                left += 1
+                right -= 1
+
+            elif current_sum < target:
+                left += 1
+            else:
+                right -= 1
+
+    return result
+
+
 if __name__ == "__main__":
     """
-    Triplet Sum
-        Given an array of integers, return all triplets [a, b, c] such that a + b + c = 0.
-        The solution must not contain duplicate triplets (e.g., [1, 2, 3] and [2, 3, 1] are considered duplicates).
-        If no such triplets are found, return an empty array.
-    Each triplet can be arranged in any order, and the output can be returned in any order.
+    Triplet Sum (3Sum Problem)
+    Given an array of integers, return all triplets [a, b, c] such that a + b + c = 0.
+    The solution must not contain duplicate triplets.
     """
 
-    examples: list[int] = [0, -1, 2, -3, 1]
-    triplet_sum(examples)
+    # Test cases
+    test_cases = [
+        [0, -1, 2, -3, 1],           # Expected: [[-3, 1, 2], [-1, 0, 1]]
+        [-1, 0, 1, 2, -1, -4],       # Expected: [[-1, -1, 2], [-1, 0, 1]]
+        [0, 0, 0],                   # Expected: [[0, 0, 0]]
+        [1, 2, 3],                   # Expected: []
+    ]
+
+    print("=" * 60)
+    print("Original Implementation (with helper function)")
+    print("=" * 60)
+    for i, nums in enumerate(test_cases, 1):
+        result = triplet_sum(nums.copy())
+        print(f"Test {i}: {nums}")
+        print(f"Result: {result}\n")
+
+    print("=" * 60)
+    print("Simplified Implementation (v2 - inline approach)")
+    print("=" * 60)
+    for i, nums in enumerate(test_cases, 1):
+        result = triplet_sum_v2(nums.copy())
+        print(f"Test {i}: {nums}")
+        print(f"Result: {result}\n")
