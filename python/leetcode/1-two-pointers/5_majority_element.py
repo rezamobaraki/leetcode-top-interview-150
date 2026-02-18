@@ -9,8 +9,10 @@ def majority_element(nums):
 
     return candidate
 
+
 def majority_element_v2(nums):
     return sorted(nums)[len(nums) // 2]
+
 
 if __name__ == '__main__':
     nums1 = [3, 2, 3]
