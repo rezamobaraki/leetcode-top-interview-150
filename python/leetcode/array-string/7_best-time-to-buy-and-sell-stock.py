@@ -1,5 +1,3 @@
-
-
 def max_profit(prices: list[int]) -> int:
     if not prices:
         return 0
