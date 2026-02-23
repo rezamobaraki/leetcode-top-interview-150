@@ -1,10 +1,4 @@
-class ListNode:
-    def __init__(self, value=0, next=None):
-        self.value = value
-        self.next = next
-
-    def __repr__(self):
-        return f"ListNode({self.value})"
+from link_list import ListNode
 
 
 def linked_list_reversal(head: ListNode) -> ListNode:
@@ -18,8 +12,8 @@ def linked_list_reversal(head: ListNode) -> ListNode:
 
     return prev_node
 
-def linked_list_recursive(head: ListNode) -> ListNode:
 
+def linked_list_recursive(head: ListNode) -> ListNode:
     if not head or not head.next:
         return head
 
@@ -28,6 +22,7 @@ def linked_list_recursive(head: ListNode) -> ListNode:
     head.next = None
 
     return new_head
+
 
 if __name__ == "__main__":
     node1 = ListNode(1)
