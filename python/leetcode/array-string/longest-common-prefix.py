@@ -28,6 +28,17 @@ def longest_common_prefix_2(strs: list[str]) -> str:
     return prefix
 
 
+def longest_common_prefix_v3(strs: list[str]) -> str:
+    if not strs:
+        return ""
+
+    for i, char in enumerate(strs[0]):
+        for s in strs[1:]:
+            if i >= len(s) or s[i] != char:
+                return strs[0][:i]
+
+    return strs[0]
+
 if __name__ == '__main__':
     # print(longest_common_prefix(["flower", "flow", "flight"]))  # Output: "fl"
     # print(longest_common_prefix(["dog", "racecar", "car"]))  # Output: ""
