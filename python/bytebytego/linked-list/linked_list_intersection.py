@@ -8,9 +8,24 @@ def linked_list_intersection(head_A: ListNode, head_B: ListNode) -> ListNode | N
 		pointer_A = pointer_A.next if pointer_A else head_B
 		pointer_B = pointer_B.next if pointer_B else head_A
 
-
-
 	return pointer_A
+
+
+def linked_list_intersection_set(head_A: ListNode, head_B: ListNode) -> ListNode | None:
+	visited = set()
+
+	current = head_A
+	while current:
+		visited.add(current)
+		current = current.next
+
+	current = head_B
+	while current:
+		if current in visited:
+			return current
+		current = current.next
+
+	return None
 
 
 if __name__ == '__main__':
@@ -27,5 +42,3 @@ if __name__ == '__main__':
 
 	result = linked_list_intersection(linked_list_A, linked_list_B)
 	print(result.value if result else None)  # Output: 6
-
-
