@@ -1,4 +1,4 @@
-from link_list import ListNode
+from linked_list import ListNode
 
 
 def remove_kth_last_node(head: ListNode, k: int) -> ListNode:
