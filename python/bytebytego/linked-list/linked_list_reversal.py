@@ -34,4 +34,4 @@ if __name__ == "__main__":
     node2.next = node3
     node3.next = node4
 
-    linked_list_recursive(node1)
+    linked_list_reversal(node1)
